@@ -6,6 +6,8 @@
 build/
 DerivedData/
 
+GoogleService*
+
 ## Various settings
 *.pbxuser
 !default.pbxuser

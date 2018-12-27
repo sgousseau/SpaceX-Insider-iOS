@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0t4-Cy-HAc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpaceX_Insider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="-29"/>
+        </scene>
+        <!--Data Feed Controller-->
+        <scene sceneID="cHt-p6-dCu">
+            <objects>
+                <collectionViewController storyboardIdentifier="DataFeedController" id="0t4-Cy-HAc" customClass="DataFeedController" customModule="SpaceX_Insider" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="kaQ-Mr-JA3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fma-e7-MPF">
+                            <size key="itemSize" width="320" height="180"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DataFeedCollectionCell" id="eUf-CG-1SS" customClass="DataFeedCollectionCell" customModule="SpaceX_Insider" customModuleProvider="target">
+                                <rect key="frame" x="27.5" y="0.0" width="320" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IVw-zL-AQc">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="UBr-0Q-7ax"/>
+                                                <constraint firstAttribute="width" constant="80" id="zXR-hE-VUY"/>
+                                            </constraints>
+                                        </imageView>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="im4-Of-OcV">
+                                            <rect key="frame" x="0.0" y="88" width="320" height="92"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="92" id="Ydc-XU-fYh"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3R9-gb-fhN">
+                                                <size key="itemSize" width="50" height="50"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DataFeedLinkCollectionCell" id="Q7m-uJ-Cz9" customClass="DataFeedLinkCollectionCell" customModule="SpaceX_Insider" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </view>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="IxP-Oe-Fjb">
+                                            <rect key="frame" x="88" y="0.0" width="224" height="59"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Falcon 1 Makes History" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcV-IH-cZR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="224" height="14.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2008-09-28T23:15:00Z" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zja-4K-J1x">
+                                                    <rect key="frame" x="0.0" y="16.5" width="224" height="12"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Falcon 1 becomes the first privately developed liquid fuel rocket to reach Earth orbit." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uir-zA-Ntp">
+                                                    <rect key="frame" x="0.0" y="30.5" width="224" height="28.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IxP-Oe-Fjb" secondAttribute="trailing" constant="8" id="5JJ-ny-7hN"/>
+                                    <constraint firstItem="IxP-Oe-Fjb" firstAttribute="leading" secondItem="IVw-zL-AQc" secondAttribute="trailing" constant="8" id="Ck3-GD-jbV"/>
+                                    <constraint firstItem="IVw-zL-AQc" firstAttribute="leading" secondItem="eUf-CG-1SS" secondAttribute="leading" id="S1t-Rs-mnV"/>
+                                    <constraint firstAttribute="trailing" secondItem="im4-Of-OcV" secondAttribute="trailing" id="Wg4-VF-GUu"/>
+                                    <constraint firstAttribute="bottom" secondItem="im4-Of-OcV" secondAttribute="bottom" id="aqd-Yy-8Zm"/>
+                                    <constraint firstItem="IxP-Oe-Fjb" firstAttribute="top" secondItem="eUf-CG-1SS" secondAttribute="top" id="c8b-KO-1o6"/>
+                                    <constraint firstItem="im4-Of-OcV" firstAttribute="top" secondItem="IVw-zL-AQc" secondAttribute="bottom" constant="8" id="qwG-W6-giJ"/>
+                                    <constraint firstItem="IVw-zL-AQc" firstAttribute="top" secondItem="eUf-CG-1SS" secondAttribute="top" id="ueE-Vq-iNX"/>
+                                    <constraint firstItem="im4-Of-OcV" firstAttribute="leading" secondItem="eUf-CG-1SS" secondAttribute="leading" id="yvW-3x-zeg"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dateLabel" destination="zja-4K-J1x" id="2ph-hD-XsL"/>
+                                    <outlet property="detailLabel" destination="uir-zA-Ntp" id="Sig-iM-KdX"/>
+                                    <outlet property="imageView" destination="IVw-zL-AQc" id="Bnz-be-rU1"/>
+                                    <outlet property="linksCollection" destination="im4-Of-OcV" id="nDD-vs-7ol"/>
+                                    <outlet property="stackView" destination="IxP-Oe-Fjb" id="GBK-Af-cj3"/>
+                                    <outlet property="titleLabel" destination="rcV-IH-cZR" id="Oed-FS-thS"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                    </collectionView>
+                    <connections>
+                        <outlet property="collectionView" destination="kaQ-Mr-JA3" id="ZxL-9q-KOr"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPq-RY-d9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1144.8" y="93.103448275862078"/>
+        </scene>
+    </scenes>
+</document>
