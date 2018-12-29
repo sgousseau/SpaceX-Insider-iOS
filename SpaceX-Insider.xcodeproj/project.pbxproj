@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C35193E21D80CC8007FA03D /* FeedDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35193D21D80CC8007FA03D /* FeedDataSources.swift */; };
+		5C35194621D80FAD007FA03D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35194521D80FAD007FA03D /* CollectionViewCell.swift */; };
+		5C35194821D80FCB007FA03D /* LaunchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35194721D80FCB007FA03D /* LaunchCollectionViewCell.swift */; };
+		5C35194A21D80FF2007FA03D /* UpcomingLaunchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35194921D80FF2007FA03D /* UpcomingLaunchCollectionViewCell.swift */; };
+		5C35194C21D81223007FA03D /* ISO8601DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35194B21D81223007FA03D /* ISO8601DateFormatter+Extension.swift */; };
+		5C35194E21D8123E007FA03D /* Formatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35194D21D8123E007FA03D /* Formatter+Extension.swift */; };
+		5C35195221D8146D007FA03D /* WikipediaCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35195121D8146D007FA03D /* WikipediaCollectionView.swift */; };
+		5C35195421D814A2007FA03D /* WikipediaArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35195321D814A2007FA03D /* WikipediaArticleView.swift */; };
+		5C35195721D81A80007FA03D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35195621D81A80007FA03D /* ImageCollectionViewCell.swift */; };
+		5C35195921D81FB7007FA03D /* RocketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35195821D81FB7007FA03D /* RocketCollectionViewCell.swift */; };
+		5C35195B21D82008007FA03D /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35195A21D82008007FA03D /* CollectionView.swift */; };
+		5C35195D21D82664007FA03D /* SquareContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35195C21D82664007FA03D /* SquareContentCollectionViewCell.swift */; };
 		5C5CED1221D0375C00D5243A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C5CED1121D0375C00D5243A /* GoogleService-Info.plist */; };
 		5C5CED1421D2CB7D00D5243A /* DataFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CED1321D2CB7D00D5243A /* DataFeedController.swift */; };
 		5C63273921CDBA3600A3881C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63273821CDBA3600A3881C /* AppDelegate.swift */; };
@@ -14,6 +26,8 @@
 		5C63273E21CDBA3600A3881C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C63273C21CDBA3600A3881C /* Main.storyboard */; };
 		5C63274021CDBA3800A3881C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C63273F21CDBA3800A3881C /* Assets.xcassets */; };
 		5C63274321CDBA3800A3881C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C63274121CDBA3800A3881C /* LaunchScreen.storyboard */; };
+		5CB3098621D70F1C00BAA237 /* FirebaseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3098521D70F1C00BAA237 /* FirebaseParser.swift */; };
+		5CB3098821D70FD200BAA237 /* FirebaseResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3098721D70FD200BAA237 /* FirebaseResources.swift */; };
 		5CFA492421D2E77A009DC361 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFA492321D2E77A009DC361 /* Links.swift */; };
 		5CFA492C21D2E863009DC361 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFA492621D2E861009DC361 /* Reachability.swift */; };
 		5CFA492D21D2E863009DC361 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFA492721D2E861009DC361 /* ImageService.swift */; };
@@ -33,6 +47,18 @@
 /* Begin PBXFileReference section */
 		3264BFCD0E500F4A90FD94BA /* Pods_SpaceX_Insider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceX_Insider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4789C4A9FFE7E822E8C2516C /* Pods-SpaceX-Insider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX-Insider.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpaceX-Insider/Pods-SpaceX-Insider.release.xcconfig"; sourceTree = "<group>"; };
+		5C35193D21D80CC8007FA03D /* FeedDataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataSources.swift; sourceTree = "<group>"; };
+		5C35194521D80FAD007FA03D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		5C35194721D80FCB007FA03D /* LaunchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C35194921D80FF2007FA03D /* UpcomingLaunchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingLaunchCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C35194B21D81223007FA03D /* ISO8601DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ISO8601DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		5C35194D21D8123E007FA03D /* Formatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Extension.swift"; sourceTree = "<group>"; };
+		5C35195121D8146D007FA03D /* WikipediaCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaCollectionView.swift; sourceTree = "<group>"; };
+		5C35195321D814A2007FA03D /* WikipediaArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaArticleView.swift; sourceTree = "<group>"; };
+		5C35195621D81A80007FA03D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C35195821D81FB7007FA03D /* RocketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C35195A21D82008007FA03D /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		5C35195C21D82664007FA03D /* SquareContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareContentCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C5CED1121D0375C00D5243A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5C5CED1321D2CB7D00D5243A /* DataFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFeedController.swift; sourceTree = "<group>"; };
 		5C63273521CDBA3600A3881C /* SpaceX-Insider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-Insider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +68,8 @@
 		5C63273F21CDBA3800A3881C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C63274221CDBA3800A3881C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C63274421CDBA3800A3881C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CB3098521D70F1C00BAA237 /* FirebaseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseParser.swift; sourceTree = "<group>"; };
+		5CB3098721D70FD200BAA237 /* FirebaseResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseResources.swift; sourceTree = "<group>"; };
 		5CFA492321D2E77A009DC361 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		5CFA492621D2E861009DC361 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		5CFA492721D2E861009DC361 /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
@@ -79,6 +107,101 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5C35193C21D80807007FA03D /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				5C35195021D8142D007FA03D /* SpaceX */,
+				5C35194F21D81422007FA03D /* Wikipedia */,
+				5C35193D21D80CC8007FA03D /* FeedDataSources.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		5C35193F21D80D12007FA03D /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				5CFA493421D2E9B1009DC361 /* Dependencies.swift */,
+				5CFA492721D2E861009DC361 /* ImageService.swift */,
+				5CFA492621D2E861009DC361 /* Reachability.swift */,
+				5CFA492921D2E862009DC361 /* ReachabilityService.swift */,
+				5CFA493221D2E8DF009DC361 /* ActivityIndicator.swift */,
+				5CFA492821D2E861009DC361 /* DownloadableImage.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		5C35194021D80D36007FA03D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5CFA492A21D2E862009DC361 /* UIImageView+DownloadableImage.swift */,
+				5CFA492B21D2E863009DC361 /* UIImage+Extensions.swift */,
+				5CFA493621D2EC87009DC361 /* String+Extension.swift */,
+				5C35194B21D81223007FA03D /* ISO8601DateFormatter+Extension.swift */,
+				5C35194D21D8123E007FA03D /* Formatter+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5C35194121D80DAC007FA03D /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				5C5CED1121D0375C00D5243A /* GoogleService-Info.plist */,
+				5CB3098521D70F1C00BAA237 /* FirebaseParser.swift */,
+				5CB3098721D70FD200BAA237 /* FirebaseResources.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		5C35194221D80E01007FA03D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5C35194421D80F8E007FA03D /* Bases */,
+				5C35194121D80DAC007FA03D /* Firebase */,
+				5C35194021D80D36007FA03D /* Extensions */,
+				5C35193F21D80D12007FA03D /* Dependencies */,
+				5C35193C21D80807007FA03D /* DataSources */,
+				5CFA496B21D4433C009DC361 /* Controllers */,
+				5CFA496421D43310009DC361 /* Models */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		5C35194321D80E34007FA03D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5C63274121CDBA3800A3881C /* LaunchScreen.storyboard */,
+				5C63273C21CDBA3600A3881C /* Main.storyboard */,
+				5C63273F21CDBA3800A3881C /* Assets.xcassets */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5C35194421D80F8E007FA03D /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				5C35194521D80FAD007FA03D /* CollectionViewCell.swift */,
+				5C35195621D81A80007FA03D /* ImageCollectionViewCell.swift */,
+				5C35195A21D82008007FA03D /* CollectionView.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		5C35194F21D81422007FA03D /* Wikipedia */ = {
+			isa = PBXGroup;
+			children = (
+				5C35195121D8146D007FA03D /* WikipediaCollectionView.swift */,
+				5C35195321D814A2007FA03D /* WikipediaArticleView.swift */,
+			);
+			path = Wikipedia;
+			sourceTree = "<group>";
+		};
+		5C35195021D8142D007FA03D /* SpaceX */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SpaceX;
+			sourceTree = "<group>";
+		};
 		5C63272C21CDBA3600A3881C = {
 			isa = PBXGroup;
 			children = (
@@ -100,24 +223,9 @@
 		5C63273721CDBA3600A3881C /* SpaceX-Insider */ = {
 			isa = PBXGroup;
 			children = (
-				5CFA496B21D4433C009DC361 /* Controllers */,
-				5CFA496421D43310009DC361 /* Models */,
-				5C5CED1121D0375C00D5243A /* GoogleService-Info.plist */,
 				5C63273821CDBA3600A3881C /* AppDelegate.swift */,
-				5C63273A21CDBA3600A3881C /* ViewController.swift */,
-				5C63273C21CDBA3600A3881C /* Main.storyboard */,
-				5C63273F21CDBA3800A3881C /* Assets.xcassets */,
-				5C63274121CDBA3800A3881C /* LaunchScreen.storyboard */,
 				5C63274421CDBA3800A3881C /* Info.plist */,
-				5CFA492821D2E861009DC361 /* DownloadableImage.swift */,
-				5CFA492721D2E861009DC361 /* ImageService.swift */,
-				5CFA492621D2E861009DC361 /* Reachability.swift */,
-				5CFA492921D2E862009DC361 /* ReachabilityService.swift */,
-				5CFA492B21D2E863009DC361 /* UIImage+Extensions.swift */,
-				5CFA492A21D2E862009DC361 /* UIImageView+DownloadableImage.swift */,
-				5CFA493221D2E8DF009DC361 /* ActivityIndicator.swift */,
-				5CFA493421D2E9B1009DC361 /* Dependencies.swift */,
-				5CFA493621D2EC87009DC361 /* String+Extension.swift */,
+				5C35194221D80E01007FA03D /* Sources */,
 			);
 			path = "SpaceX-Insider";
 			sourceTree = "<group>";
@@ -136,8 +244,10 @@
 		5CFA496B21D4433C009DC361 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5CFA496C21D44345009DC361 /* Cells */,
+				5C63273A21CDBA3600A3881C /* ViewController.swift */,
 				5C5CED1321D2CB7D00D5243A /* DataFeedController.swift */,
+				5C35194321D80E34007FA03D /* UI */,
+				5CFA496C21D44345009DC361 /* Cells */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -145,6 +255,10 @@
 		5CFA496C21D44345009DC361 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5C35194721D80FCB007FA03D /* LaunchCollectionViewCell.swift */,
+				5C35194921D80FF2007FA03D /* UpcomingLaunchCollectionViewCell.swift */,
+				5C35195821D81FB7007FA03D /* RocketCollectionViewCell.swift */,
+				5C35195C21D82664007FA03D /* SquareContentCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -309,17 +423,31 @@
 				5CFA496A21D434D4009DC361 /* Launch.swift in Sources */,
 				5C5CED1421D2CB7D00D5243A /* DataFeedController.swift in Sources */,
 				5C63273B21CDBA3600A3881C /* ViewController.swift in Sources */,
+				5C35195B21D82008007FA03D /* CollectionView.swift in Sources */,
 				5C63273921CDBA3600A3881C /* AppDelegate.swift in Sources */,
+				5C35195221D8146D007FA03D /* WikipediaCollectionView.swift in Sources */,
+				5C35194821D80FCB007FA03D /* LaunchCollectionViewCell.swift in Sources */,
 				5CFA492C21D2E863009DC361 /* Reachability.swift in Sources */,
+				5CB3098821D70FD200BAA237 /* FirebaseResources.swift in Sources */,
+				5C35195D21D82664007FA03D /* SquareContentCollectionViewCell.swift in Sources */,
 				5CFA493721D2EC87009DC361 /* String+Extension.swift in Sources */,
+				5C35195421D814A2007FA03D /* WikipediaArticleView.swift in Sources */,
 				5CFA493321D2E8DF009DC361 /* ActivityIndicator.swift in Sources */,
+				5C35194C21D81223007FA03D /* ISO8601DateFormatter+Extension.swift in Sources */,
+				5C35194621D80FAD007FA03D /* CollectionViewCell.swift in Sources */,
+				5C35195721D81A80007FA03D /* ImageCollectionViewCell.swift in Sources */,
 				5CFA492421D2E77A009DC361 /* Links.swift in Sources */,
 				5CFA496821D43468009DC361 /* History.swift in Sources */,
 				5CFA492F21D2E863009DC361 /* ReachabilityService.swift in Sources */,
+				5C35194E21D8123E007FA03D /* Formatter+Extension.swift in Sources */,
+				5C35194A21D80FF2007FA03D /* UpcomingLaunchCollectionViewCell.swift in Sources */,
 				5CFA493121D2E863009DC361 /* UIImage+Extensions.swift in Sources */,
+				5CB3098621D70F1C00BAA237 /* FirebaseParser.swift in Sources */,
 				5CFA492D21D2E863009DC361 /* ImageService.swift in Sources */,
+				5C35195921D81FB7007FA03D /* RocketCollectionViewCell.swift in Sources */,
 				5CFA496621D4331E009DC361 /* Mission.swift in Sources */,
 				5CFA493021D2E863009DC361 /* UIImageView+DownloadableImage.swift in Sources */,
+				5C35193E21D80CC8007FA03D /* FeedDataSources.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
