@@ -13,4 +13,8 @@ extension String {
     func url() -> URL? {
         return URL(string: self)
     }
+    
+    var URLEscaped: String {
+        return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+    }
 }

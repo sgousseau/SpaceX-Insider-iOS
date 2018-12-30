@@ -19,6 +19,8 @@
 		5C35195921D81FB7007FA03D /* RocketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35195821D81FB7007FA03D /* RocketCollectionViewCell.swift */; };
 		5C35195B21D82008007FA03D /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35195A21D82008007FA03D /* CollectionView.swift */; };
 		5C35195D21D82664007FA03D /* SquareContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35195C21D82664007FA03D /* SquareContentCollectionViewCell.swift */; };
+		5C35195F21D827B8007FA03D /* RectangleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35195E21D827B8007FA03D /* RectangleCollectionViewCell.swift */; };
+		5C35196121D83A02007FA03D /* FeedHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C35196021D83A01007FA03D /* FeedHeaderCollectionReusableView.swift */; };
 		5C5CED1221D0375C00D5243A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C5CED1121D0375C00D5243A /* GoogleService-Info.plist */; };
 		5C5CED1421D2CB7D00D5243A /* DataFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CED1321D2CB7D00D5243A /* DataFeedController.swift */; };
 		5C63273921CDBA3600A3881C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63273821CDBA3600A3881C /* AppDelegate.swift */; };
@@ -26,6 +28,10 @@
 		5C63273E21CDBA3600A3881C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C63273C21CDBA3600A3881C /* Main.storyboard */; };
 		5C63274021CDBA3800A3881C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C63273F21CDBA3800A3881C /* Assets.xcassets */; };
 		5C63274321CDBA3800A3881C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C63274121CDBA3800A3881C /* LaunchScreen.storyboard */; };
+		5CACFDF221D843180027BFF5 /* WikipediaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CACFDF121D843170027BFF5 /* WikipediaAPI.swift */; };
+		5CACFDF421D8437B0027BFF5 /* WikipediaSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CACFDF321D8437B0027BFF5 /* WikipediaSearchResult.swift */; };
+		5CACFDF621D843B60027BFF5 /* WikipediaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CACFDF521D843B60027BFF5 /* WikipediaPage.swift */; };
+		5CACFDF821D8448B0027BFF5 /* HtmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CACFDF721D8448B0027BFF5 /* HtmlParser.swift */; };
 		5CB3098621D70F1C00BAA237 /* FirebaseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3098521D70F1C00BAA237 /* FirebaseParser.swift */; };
 		5CB3098821D70FD200BAA237 /* FirebaseResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB3098721D70FD200BAA237 /* FirebaseResources.swift */; };
 		5CFA492421D2E77A009DC361 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFA492321D2E77A009DC361 /* Links.swift */; };
@@ -59,6 +65,8 @@
 		5C35195821D81FB7007FA03D /* RocketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C35195A21D82008007FA03D /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		5C35195C21D82664007FA03D /* SquareContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C35195E21D827B8007FA03D /* RectangleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCollectionViewCell.swift; sourceTree = "<group>"; };
+		5C35196021D83A01007FA03D /* FeedHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		5C5CED1121D0375C00D5243A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5C5CED1321D2CB7D00D5243A /* DataFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFeedController.swift; sourceTree = "<group>"; };
 		5C63273521CDBA3600A3881C /* SpaceX-Insider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX-Insider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +76,10 @@
 		5C63273F21CDBA3800A3881C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C63274221CDBA3800A3881C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C63274421CDBA3800A3881C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CACFDF121D843170027BFF5 /* WikipediaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikipediaAPI.swift; sourceTree = "<group>"; };
+		5CACFDF321D8437B0027BFF5 /* WikipediaSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaSearchResult.swift; sourceTree = "<group>"; };
+		5CACFDF521D843B60027BFF5 /* WikipediaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaPage.swift; sourceTree = "<group>"; };
+		5CACFDF721D8448B0027BFF5 /* HtmlParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlParser.swift; sourceTree = "<group>"; };
 		5CB3098521D70F1C00BAA237 /* FirebaseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseParser.swift; sourceTree = "<group>"; };
 		5CB3098721D70FD200BAA237 /* FirebaseResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseResources.swift; sourceTree = "<group>"; };
 		5CFA492321D2E77A009DC361 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
@@ -189,8 +201,12 @@
 		5C35194F21D81422007FA03D /* Wikipedia */ = {
 			isa = PBXGroup;
 			children = (
+				5CACFDF121D843170027BFF5 /* WikipediaAPI.swift */,
 				5C35195121D8146D007FA03D /* WikipediaCollectionView.swift */,
 				5C35195321D814A2007FA03D /* WikipediaArticleView.swift */,
+				5CACFDF321D8437B0027BFF5 /* WikipediaSearchResult.swift */,
+				5CACFDF521D843B60027BFF5 /* WikipediaPage.swift */,
+				5CACFDF721D8448B0027BFF5 /* HtmlParser.swift */,
 			);
 			path = Wikipedia;
 			sourceTree = "<group>";
@@ -248,6 +264,7 @@
 				5C5CED1321D2CB7D00D5243A /* DataFeedController.swift */,
 				5C35194321D80E34007FA03D /* UI */,
 				5CFA496C21D44345009DC361 /* Cells */,
+				5C35196021D83A01007FA03D /* FeedHeaderCollectionReusableView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -259,6 +276,7 @@
 				5C35194921D80FF2007FA03D /* UpcomingLaunchCollectionViewCell.swift */,
 				5C35195821D81FB7007FA03D /* RocketCollectionViewCell.swift */,
 				5C35195C21D82664007FA03D /* SquareContentCollectionViewCell.swift */,
+				5C35195E21D827B8007FA03D /* RectangleCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -423,6 +441,7 @@
 				5CFA496A21D434D4009DC361 /* Launch.swift in Sources */,
 				5C5CED1421D2CB7D00D5243A /* DataFeedController.swift in Sources */,
 				5C63273B21CDBA3600A3881C /* ViewController.swift in Sources */,
+				5CACFDF621D843B60027BFF5 /* WikipediaPage.swift in Sources */,
 				5C35195B21D82008007FA03D /* CollectionView.swift in Sources */,
 				5C63273921CDBA3600A3881C /* AppDelegate.swift in Sources */,
 				5C35195221D8146D007FA03D /* WikipediaCollectionView.swift in Sources */,
@@ -434,6 +453,7 @@
 				5C35195421D814A2007FA03D /* WikipediaArticleView.swift in Sources */,
 				5CFA493321D2E8DF009DC361 /* ActivityIndicator.swift in Sources */,
 				5C35194C21D81223007FA03D /* ISO8601DateFormatter+Extension.swift in Sources */,
+				5CACFDF821D8448B0027BFF5 /* HtmlParser.swift in Sources */,
 				5C35194621D80FAD007FA03D /* CollectionViewCell.swift in Sources */,
 				5C35195721D81A80007FA03D /* ImageCollectionViewCell.swift in Sources */,
 				5CFA492421D2E77A009DC361 /* Links.swift in Sources */,
@@ -442,11 +462,15 @@
 				5C35194E21D8123E007FA03D /* Formatter+Extension.swift in Sources */,
 				5C35194A21D80FF2007FA03D /* UpcomingLaunchCollectionViewCell.swift in Sources */,
 				5CFA493121D2E863009DC361 /* UIImage+Extensions.swift in Sources */,
+				5C35196121D83A02007FA03D /* FeedHeaderCollectionReusableView.swift in Sources */,
 				5CB3098621D70F1C00BAA237 /* FirebaseParser.swift in Sources */,
 				5CFA492D21D2E863009DC361 /* ImageService.swift in Sources */,
+				5C35195F21D827B8007FA03D /* RectangleCollectionViewCell.swift in Sources */,
 				5C35195921D81FB7007FA03D /* RocketCollectionViewCell.swift in Sources */,
 				5CFA496621D4331E009DC361 /* Mission.swift in Sources */,
+				5CACFDF421D8437B0027BFF5 /* WikipediaSearchResult.swift in Sources */,
 				5CFA493021D2E863009DC361 /* UIImageView+DownloadableImage.swift in Sources */,
+				5CACFDF221D843180027BFF5 /* WikipediaAPI.swift in Sources */,
 				5C35193E21D80CC8007FA03D /* FeedDataSources.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

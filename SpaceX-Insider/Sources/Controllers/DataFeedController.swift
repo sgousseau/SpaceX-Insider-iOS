@@ -57,7 +57,6 @@ indirect enum Section: AnimatableSectionModelType {
         case .cores(let items): return items.map({ $0 })
         case .ships(let items): return items.map({ $0 })
         case .rockets(let items): return items.map({ $0 })
-        default: return []
         }
     }
     
@@ -75,6 +74,7 @@ enum SectionItemStyle {
 
 enum SectionItem: IdentifiableType, Equatable {
     
+    case history(title: String, date: String, detail: String, wikipedia: String)
     case square(title: String, date: String, imageUrlString: String, style: SectionItemStyle)
     case rectangle(title: String, date: String, detail: String, imageUrlString: String, style: SectionItemStyle)
     case bigSquare(title: String, date: String, detail: String, imageUrlString: String, otherImagesUrlString: [String], style: SectionItemStyle)
@@ -90,15 +90,16 @@ enum SectionItem: IdentifiableType, Equatable {
     
     var title: String {
         switch self {
+        case .history(let title, _, _, _): return title
         case .square(let title, _, _, _): return title
         case .rectangle(let title, _, _, _, _): return title
         case .bigSquare(let title, _, _, _, _, _): return title
-        default: return ""
         }
     }
     
     var date: String {
         switch self {
+        case .history(_, let date, _, _): return date
         case .square(_, let date, _, _): return date
         case .rectangle(_, let date, _, _, _): return date
         case .bigSquare(_, let date, _, _, _, _): return date
@@ -107,6 +108,7 @@ enum SectionItem: IdentifiableType, Equatable {
     
     var detail: String {
         switch self {
+        case .history(_, _, let detail, _): return detail
         case .square: return ""
         case .rectangle(_, _, let detail, _, _): return detail
         case .bigSquare(_, _, let detail, _, _, _): return detail
@@ -115,9 +117,17 @@ enum SectionItem: IdentifiableType, Equatable {
     
     var imageUrlString: String {
         switch self {
+        case .history: return ""
         case .square(_, _, let url, _): return url
         case .rectangle(_, _, let url, _, _): return url
         case .bigSquare(_, _, let url, _, _, _): return url
+        }
+    }
+    
+    var wikipediaLink: String {
+        switch self {
+        case .history(_, _, _, let wikipedia): return wikipedia
+        default: return ""
         }
     }
     
@@ -131,11 +141,28 @@ enum SectionItem: IdentifiableType, Equatable {
 class DataFeedController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var datasource: RxCollectionViewSectionedAnimatedDataSource<Section>
+    var datasource: RxCollectionViewSectionedAnimatedDataSource<Section>!
+    var disposeBag: DisposeBag! = DisposeBag()
     
-    var disposeBag: DisposeBag!
-    
-    required init?(coder aDecoder: NSCoder) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let wikipediaApi = WikipediaAPI.sharedAPI
+        
+        func configureImageURLs(_ query: String) -> Observable<[URL]> {
+            return wikipediaApi
+                .search(query)
+                .map({ $0.first }).unwrap()
+                .flatMapLatest(wikipediaApi.articleContent)
+                .map { page in
+                    do {
+                        return try HtmlParser.parseImageURLsfromHTMLSuitableForDisplay(page.text as NSString)
+                    } catch {
+                        return []
+                    }
+            }
+        }
+        
         func configureHistoryCell(_ cell: UICollectionViewCell, item: SectionItem) {
             guard let historyCell = cell as? DataFeedCollectionCell else {
                 return
@@ -147,6 +174,16 @@ class DataFeedController: UIViewController {
             
             if let url = item.imageUrlString.url() {
                 historyCell.downloadableImage = DefaultImageService.sharedImageService.imageFromURL(url, reachabilityService: DefaultReachabilityService.sharedReachabilityService)
+            }
+            
+            if let url = item.wikipediaLink.url(), let query = url.pathComponents.last {
+                historyCell.disposeBag = DisposeBag()
+                configureImageURLs(query)
+                    .asDriver(onErrorJustReturn: [])
+                    .drive(historyCell.linksCollection.rx.items(cellIdentifier: "ImageCollectionViewCell", cellType: ImageCollectionViewCell.self)) { _, url, cell in
+                        cell.downloadableImage = DefaultImageService.sharedImageService.imageFromURL(url, reachabilityService: DefaultReachabilityService.sharedReachabilityService)
+                    }
+                    .disposed(by: historyCell.disposeBag)
             }
         }
         
@@ -161,9 +198,10 @@ class DataFeedController: UIViewController {
             configureHistoryCell(cell, item: item)
             
             return cell
-            
-        }, configureSupplementaryView: { (source, collection, title, indexPath) -> UICollectionReusableView in
-            return UICollectionReusableView.init()
+        }, configureSupplementaryView: { (source, collection, kind, indexPath) -> UICollectionReusableView in
+            let header = collection.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "FeedHeaderCollectionReusableView", for: indexPath) as! FeedHeaderCollectionReusableView
+            header.titleLabel.text = kind
+            return header
             
         }, moveItem: { (source, indexA, indexB) in
             
@@ -171,15 +209,7 @@ class DataFeedController: UIViewController {
             return false
         }
         
-        disposeBag = DisposeBag()
-        
-        super.init(coder: aDecoder)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        topLevelDataSource()
+        collectionDatasource()
             .bind(to: collectionView.rx.items(dataSource: datasource))
             .disposed(by: disposeBag)
     }
@@ -210,7 +240,7 @@ class DataFeedController: UIViewController {
     
     func historySection(_ data: [History]) -> Section {
         let items = data.map({
-            SectionItem.rectangle(title: $0.title, date: $0.event_date_utc, detail: $0.details, imageUrlString: $0.links?.firstArticle() ?? "", style: .opaque)
+            SectionItem.history(title: $0.title, date: $0.event_date_utc, detail: $0.details, wikipedia: $0.links?.wikipedia ?? "")
         })
         return Section.history(items: items)
     }
@@ -237,24 +267,20 @@ class DataFeedCollectionCell: UICollectionViewCell {
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var linksCollection: UICollectionView!
     
-    var disposeBag: DisposeBag!
+    var disposeBag: DisposeBag! = DisposeBag()
+    var imageBag: DisposeBag!
+    
     var downloadableImage: Observable<DownloadableImage>?{
         didSet{
-            let disposeBag = DisposeBag()
+            let imageBag = DisposeBag()
             
             self.downloadableImage?
                 .asDriver(onErrorJustReturn: DownloadableImage.offlinePlaceholder)
                 .drive(imageView.rx.downloadableImageAnimated(CATransitionType.fade.rawValue))
                 .disposed(by: disposeBag)
             
-            self.disposeBag = disposeBag
+            self.imageBag = imageBag
         }
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        linksCollection!.register(DataFeedLinkCollectionCell.self, forCellWithReuseIdentifier: "DataFeedLinkCollectionCell")
     }
 }
 
